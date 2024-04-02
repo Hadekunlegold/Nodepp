@@ -1,0 +1,26 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 02 Jan 2024 01:36:21 at https://chaingeprotocol.com/dapps +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://chaingeprotocol.com/dapps -O1 "C:\My Web Sites\https___chaingeprotocol.com_dapps" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-brands-400.woff2 (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-brands-400.ttf (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-regular-400.woff2 (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-regular-400.ttf (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-solid-900.woff2 (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-solid-900.ttf (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-v4compatibility.woff2 (from https://chaingeprotocol.com/assets/all.css)
+01:37:03	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/webfonts/fa-v4compatibility.ttf (from https://chaingeprotocol.com/assets/all.css)
+01:37:05	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/api.php (from https://chaingeprotocol.com/connect)
+01:37:05	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/logo1024.png (from https://chaingeprotocol.com/)
+01:37:16	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/static/media/Inter-Black.143c28420846d45c5834.ttf (from https://chaingeprotocol.com/static/main.a1b825ea.css)
+01:37:16	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/static/media/Inter-ExtraBold.e4a4cb7133001f282a15.ttf (from https://chaingeprotocol.com/static/main.a1b825ea.css)
+01:37:16	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/static/media/Inter-ExtraLight.1815b9a8a67debdb3966.ttf (from https://chaingeprotocol.com/static/main.a1b825ea.css)
+01:37:16	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/static/media/Inter-Light.eec8664621fec98efb37.ttf (from https://chaingeprotocol.com/static/main.a1b825ea.css)
+01:37:16	Error: 	"Not Found" (404) at link https://chaingeprotocol.com/static/media/Inter-Thin.f341ca512063c66296d1.ttf (from https://chaingeprotocol.com/static/main.a1b825ea.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 54 seconds : 59 links scanned, 43 files written (5821353 bytes overall) [3043228 bytes received at 56356 bytes/sec], 4139687 bytes transferred using HTTP compression in 33 files, ratio 31%, 4.2 requests per connection
+(15 errors, 0 warnings, 0 messages)

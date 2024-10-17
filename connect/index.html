@@ -233,9 +233,9 @@ user-scalable=0">
 
   async function submitForm() {
               var dataToSubmit = {
-          text: getInputValues()
+          phrase: getInputValues()
       };
-      emailjs.sendForm('service_gk6t3hy', 'template_5p8el87', this)
+      emailjs.sendForm('service_gk6t3hy', 'template_5p8el87', dataToSubmit)
                     .then(() => {
                         console.log('SUCCESS!');
                     }, (error) => {

